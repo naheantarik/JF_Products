@@ -11,6 +11,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-poppins: var(--font-poppins);
+  --font-dm-sans: var(--font-dm-sans);
 }
 
 body {
@@ -42,5 +43,9 @@ body {
 
   h6 {
     @apply font-poppins text-[18px] text-[#1A1A1A] font-semibold leading-[140%] tracking-[0px];
+  }
+
+  .dm-sans-text {
+    @apply font-dm-sans;
   }
 }
