@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* @layer base {
+  h1 {
+    @apply font-poppins text-[62px] text-[#1A1A1A] font-medium leading-[72px] tracking-[0px];
+  }
+
+  h2 {
+    @apply font-poppins text-[42px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
+  }
+
+  h3 {
+    @apply font-poppins text-[38px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
+  }
+
+  h4 {
+    @apply font-poppins text-[32px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
+  }
+
+  h5 {
+    @apply font-poppins text-[28px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
+  }
+
+  h6 {
+    @apply font-poppins text-[18px] text-[#1A1A1A] font-semibold leading-[140%] tracking-[0px];
+  }
+} */
