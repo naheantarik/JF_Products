@@ -23,6 +23,16 @@ module.exports = {
         poppins: ["var(--font-poppins)", "sans-serif"],
         "dm-sans": ["var(--font-dm-sans)", "sans-serif"],
       },
+
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        scroll: "scroll 30s linear infinite",
+      },
     },
   },
   plugins: [],

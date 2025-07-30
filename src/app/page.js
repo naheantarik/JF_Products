@@ -5,6 +5,7 @@ import AgriculturalProduct from "./components/AgriculturalProduct";
 import LandscapeProduct from "./components/LandscapeProduct";
 import CtaSection from "./components/CtaSection";
 import WhyUsPage from "./components/WhyUs";
+import ClientCarousel from "./components/ClientCarousel";
 
 const page = () => {
   return (
@@ -15,6 +16,7 @@ const page = () => {
       <LandscapeProduct />
       <CtaSection />
       <WhyUsPage />
+      <ClientCarousel />
     </div>
   );
 };
