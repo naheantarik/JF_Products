@@ -15,9 +15,9 @@ const WhyUsPage = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-10 md:gap-8 gap-6 lg:pt-[40px] md:pt-[40px] pt-[20px]">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-10 md:gap-8 gap-6 pt-[110px]">
           {/* 1st card */}
-          <div className="bg-[url('/images/card-bg-1.png')] bg-cover bg-center rounded-[24px] lg:px-[40px] md:px-[30px] px-[20px] lg:py-[30px] md:py-[25px] py-[20px] mt-[70px]">
+          <div className="bg-[url('/images/card-bg-1.png')] bg-cover bg-center rounded-[24px] lg:px-[40px] md:px-[30px] px-[20px] lg:py-[30px] md:py-[25px] py-[20px]">
             <div className="max-w-[320px] w-full flex flex-col items-start lg:gap-[30px] md:gap-[25px] gap-[20px]">
               <svg
                 width="51.000000"
@@ -98,7 +98,7 @@ const WhyUsPage = () => {
           </div>
 
           {/* 2nd card */}
-          <div className="bg-[url('/images/card-bg-2.png')] bg-cover bg-center rounded-[24px] lg:px-[40px] md:px-[30px] px-[20px] lg:py-[30px] md:py-[25px] py-[20px]">
+          <div className="relative lg:-translate-y-[70px] md:-translate-y-[70px] -translate-y-0 bg-[url('/images/card-bg-2.png')] bg-cover bg-center rounded-[24px] lg:px-[40px] md:px-[30px] px-[20px] lg:py-[30px] md:py-[25px] py-[20px]">
             <div className="max-w-[320px] w-full flex flex-col items-start lg:gap-[30px] md:gap-[25px] gap-[20px]">
               <svg
                 width="70.000000"
@@ -161,7 +161,7 @@ const WhyUsPage = () => {
           </div>
 
           {/* 3rd card */}
-          <div className="bg-[url('/images/card-bg-1.png')] bg-cover bg-center rounded-[24px] lg:px-[40px] md:px-[30px] px-[20px] lg:py-[30px] md:py-[25px] py-[20px] mt-[70px]">
+          <div className="bg-[url('/images/card-bg-1.png')] bg-cover bg-center rounded-[24px] lg:px-[40px] md:px-[30px] px-[20px] lg:py-[30px] md:py-[25px] py-[20px]">
             <div className="max-w-[320px] w-full flex flex-col items-start lg:gap-[30px] md:gap-[25px] gap-[20px]">
               <svg
                 width="70.000000"
@@ -355,6 +355,12 @@ const WhyUsPage = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="flex justify-center mt-[40px]">
+          <button className=" bg-[#B0DD1D] text-black text-[18px] font-medium dm-sans-text leading-[100%] tracking-[0px] px-[32px] py-[16px] rounded-full cursor-pointer">
+            Contact
+          </button>
         </div>
       </div>
     </section>
