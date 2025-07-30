@@ -1,14 +1,60 @@
-import React from 'react'
+import React from "react";
+import Image from "next/image";
 
 const CtaSection = () => {
   return (
     <section className="lg:pt-[100px] md:pt-[80px] pt-[60px] px-5 lg:px-0 md:px-0 sm:px-0">
-      <div className="container mx-auto bg-[#002B55] rounded-[24px] lg:py-20 md:py-16 py-12 lg:px-[177px] md:px-[100px] px-[20px]">
+      <div className="container mx-auto rounded-[24px] lg:py-20 md:py-16 py-12 lg:px-[177px] md:px-[100px] px-[20px] bg-[#002B55]">
         <h2 className="text-white text-center lg:mb-[50px] md:mb-[40px] mb-[30px]">
           Trusted by over 6K+ customers
         </h2>
         {/* InfoSection */}
         <div className="flex lg:flex-row md:flex-row flex-col lg:items-center md:items-center items-start justify-between lg:gap-[100px] md:gap-[50px] gap-[30px] pl-7 lg:pl-0 md:pl-0">
+          {/* <div className="absolute lg:left-[25%] lg:top-[-160px] md:left-[40%] md:top-[-160px] left-[30%] top-[-160px]">
+            <svg
+              width="897.000000"
+              className="w-[497px] h-[497px]"
+              height="897.000000"
+              viewBox="0 0 897 897"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <desc>Created with Pixso.</desc>
+              <defs>
+                <filter
+                  id="filter_243_489_dd"
+                  x="0.000000"
+                  y="0.000000"
+                  width="897.000000"
+                  height="897.000000"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  />
+                  <feGaussianBlur
+                    stdDeviation="66.6667"
+                    result="effect_layerBlur_1"
+                  />
+                </filter>
+              </defs>
+              <g filter="url(#filter_243_489_dd)">
+                <circle
+                  id="Ellipse 23"
+                  cx="448.500000"
+                  cy="448.500000"
+                  r="248.500000"
+                  fill="#1B7FE1"
+                  fill-opacity="0.400000"
+                />
+              </g>
+            </svg>
+          </div> */}
           {/* 1st column */}
           <div className="flex items-center gap-5">
             <div className="w-[80px] h-[80px] bg-white rounded-[200px] p-[19px]">
@@ -333,7 +379,6 @@ const CtaSection = () => {
       </div>
     </section>
   );
-}
-
+};
 
 export default CtaSection;

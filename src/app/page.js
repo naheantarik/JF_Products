@@ -4,6 +4,7 @@ import { HeroSection } from "./components/HeroSection";
 import AgriculturalProduct from "./components/AgriculturalProduct";
 import LandscapeProduct from "./components/LandscapeProduct";
 import CtaSection from "./components/CtaSection";
+import WhyUsPage from "./components/WhyUs";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <AgriculturalProduct />
       <LandscapeProduct />
       <CtaSection />
+      <WhyUsPage />
     </div>
   );
 };
