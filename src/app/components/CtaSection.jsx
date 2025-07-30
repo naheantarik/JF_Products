@@ -8,10 +8,10 @@ const CtaSection = () => {
           Trusted by over 6K+ customers
         </h2>
         {/* InfoSection */}
-        <div className="flex flex-wrap lg:flex-row md:flex-row flex-col lg:items-center md:items-center items-start justify-center lg:gap-[100px] md:gap-[50px] gap-[30px]">
+        <div className="flex lg:flex-row md:flex-row flex-col lg:items-center md:items-center items-start justify-between lg:gap-[100px] md:gap-[50px] gap-[30px] pl-7 lg:pl-0 md:pl-0">
           {/* 1st column */}
-          <div className="flex items-center justify-center gap-5 lg:w-1/3 md:w-1/3 w-full">
-            <div className="w-[80px] h-[80px] bg-white rounded-[200px] p-[19px] flex-shrink-0">
+          <div className="flex items-center gap-5">
+            <div className="w-[80px] h-[80px] bg-white rounded-[200px] p-[19px]">
               <svg
                 width="42.020020"
                 height="42.020264"
@@ -118,7 +118,7 @@ const CtaSection = () => {
             </div>
           </div>
           {/* 2nd column */}
-          <div className="flex items-center justify-center gap-5">
+          <div className="flex items-center gap-5">
             <div className="w-[80px] h-[80px] bg-white rounded-[200px] p-[19px]">
               <svg
                 width="42.020020"
@@ -226,7 +226,7 @@ const CtaSection = () => {
             </div>
           </div>
           {/* 3rd column */}
-          <div className="flex items-center justify-center gap-5">
+          <div className="flex items-center gap-5">
             <div className="w-[80px] h-[80px] bg-white rounded-[200px] p-[19px]">
               <svg
                 width="42.020020"
