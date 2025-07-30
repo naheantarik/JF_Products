@@ -22,27 +22,27 @@ body {
 
 @layer base {
   h1 {
-    @apply font-poppins text-[62px] text-[#1A1A1A] font-medium leading-[72px] tracking-[0px];
+    @apply font-poppins lg:text-[62px] md:text-[42px] text-[24px] text-[#1A1A1A] font-medium leading-[72px] tracking-[0px];
   }
 
   h2 {
-    @apply font-poppins text-[42px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
+    @apply font-poppins lg:text-[42px] md:text-[32px] text-[24px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
   }
 
   h3 {
-    @apply font-poppins text-[38px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
+    @apply font-poppins lg:text-[38px] md:text-[28px] text-[24px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
   }
 
   h4 {
-    @apply font-poppins text-[32px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
+    @apply font-poppins lg:text-[32px] md:text-[24px] text-[20px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
   }
 
   h5 {
-    @apply font-poppins text-[28px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
+    @apply font-poppins lg:text-[28px] md:text-[24px] text-[20px] text-[#1A1A1A] font-medium leading-[100%] tracking-[0px];
   }
 
   h6 {
-    @apply font-poppins text-[18px] text-[#1A1A1A] font-semibold leading-[140%] tracking-[0px];
+    @apply font-poppins lg:text-[18px] md:text-[16px] text-[14px] text-[#1A1A1A] font-semibold leading-[140%] tracking-[0px];
   }
 
   .dm-sans-text {

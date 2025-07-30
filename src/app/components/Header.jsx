@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header className="bg-white lg:pt-[10px] md:pt-[10px] pt-[0px] relative">
-      <div className="lg:h-[150px] md:h-[100px] h-[80px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[768px] mx-auto flex items-center justify-between">
+      <div className="lg:h-[150px] md:h-[100px] h-[80px] container mx-auto flex items-center justify-between">
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center justify-center gap-[50px] pt-[35px] pb-[97px]">
           <Link

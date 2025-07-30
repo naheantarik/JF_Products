@@ -1,54 +1,68 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ProductCard from './ProductCard'
 
-const ProductSection = () => {
+const AgriculturalProduct = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [productsPerPage, setProductsPerPage] = useState(4);
 
     const products = [
       {
         id: 1,
         name: "JF Barbed Wire- 270 GSM",
-        price: 4995.00,
+        price: 4995.0,
         image: "/images/product/image-1.png",
       },
       {
         id: 2,
-        name: "JF Barbed Wire- 270 GSM",
-        price: 4995.00,
-        image: "/images/product/image-1.png",
+        name: "FGC RustFree Fencing Poles",
+        price: 499.0,
+        price2: 1589.0,
+        image: "/images/product/image-2.png",
       },
       {
         id: 3,
-        name: "JF Barbed Wire- 270 GSM",
-        price: 4995.00,
-        image: "/images/product/image-1.png",
+        name: "GI Poultry Mesh",
+        price: 1260.00,
+        price2: 10750.00,
+        image: "/images/product/image-3.png",
       },
       {
         id: 4,
-        name: "JF Barbed Wire- 270 GSM",
-        price: 4995.00,
-        image: "/images/product/image-1.png",
+        name: "JF Bluelink Mesh",
+        price: 3067.50,
+        price2: 6362.50,
+        image: "/images/product/image-4.png",
       },
       {
         id: 5,
         name: "JF Barbed Wire- 270 GSM",
-        price: 500.00,
-        image: "/images/product/image-1.png",
+        price: 500.0,
+        price2: 800.0,
+        image: "/images/product/image-3.png",
       },
     ];
 
-    const getProductsPerPage = () => {
-      if (typeof window !== 'undefined') {
-        if (window.innerWidth >= 1024) return 4;
-        if (window.innerWidth >= 768) return 2;
-        return 1;
-      }
-      return 4;
-    };
+    // Improved responsive logic with useEffect
+    useEffect(() => {
+      const updateProductsPerPage = () => {
+        if (window.innerWidth >= 1024) {
+          setProductsPerPage(4);
+        } else if (window.innerWidth >= 768) {
+          setProductsPerPage(2);
+        } else {
+          setProductsPerPage(1);
+        }
+      };
 
-    const maxIndex = Math.max(0, products.length - getProductsPerPage());
+      updateProductsPerPage();
+      window.addEventListener('resize', updateProductsPerPage);
+      
+      return () => window.removeEventListener('resize', updateProductsPerPage);
+    }, []);
+
+    const maxIndex = Math.max(0, products.length - productsPerPage);
 
     const nextSlide = () => {
       setCurrentIndex((prevIndex) => 
@@ -62,17 +76,17 @@ const ProductSection = () => {
       );
     };
 
-    const visibleProducts = products.slice(currentIndex, currentIndex + getProductsPerPage());
+    const visibleProducts = products.slice(currentIndex, currentIndex + productsPerPage);
 
   return (
-    <section className="pt-[100px] pb-[110px]">
-      <div className="max-w-[1280px] mx-auto relative">
-        <h2>Our Products</h2>
+    <section className="lg:pt-[100px] md:pt-[80px] pt-[60px] px-5 sm:px-0 md:px-0 lg:px-0">
+      <div className="container mx-auto relative">
+        <h2 className="text-left mb-[30px]">Agricultural Products</h2>
 
-        {/* Product Slider Arrows */}
+        {/* Product Slider Arrows - Responsive positioning */}
         <button
           onClick={prevSlide}
-          className="absolute left-[-25px] top-[50%] z-10 w-[47px] h-[47px] bg-white border-[0.84px] border-[#1A1A1A] opacity-[0.7] rounded-[84px] p-[13px] cursor-pointer"
+          className="absolute left-[-15px] sm:left-[-20px] lg:left-[-25px] top-[53%] z-10 w-[40px] h-[40px] sm:w-[44px] sm:h-[44px] lg:w-[47px] lg:h-[47px] bg-white border-[0.84px] border-[#1A1A1A] opacity-[0.7] rounded-[84px] p-[10px] sm:p-[12px] lg:p-[13px] cursor-pointer"
           aria-label="Previous product"
         >
           <svg
@@ -91,7 +105,7 @@ const ProductSection = () => {
                   height="19.156250"
                   transform="matrix(-1 0 0 1 20.4219 0.421875)"
                   fill="white"
-                  fill-opacity="0"
+                  fillOpacity="0"
                 />
               </clipPath>
             </defs>
@@ -102,26 +116,26 @@ const ProductSection = () => {
               height="19.156250"
               transform="matrix(-1 0 0 1 20.4219 0.421875)"
               fill="#FFFFFF"
-              fill-opacity="0"
+              fillOpacity="0"
             />
-            <g clip-path="url(#clip259_138)">
+            <g clipPath="url(#clip259_138)">
               <path
                 id="Vector"
                 d="M3.33 9.99L16.66 9.99"
                 stroke="#002B55"
-                stroke-opacity="1.000000"
-                stroke-width="1.265625"
-                stroke-linejoin="round"
-                stroke-linecap="round"
+                strokeOpacity="1.000000"
+                strokeWidth="1.265625"
+                strokeLinejoin="round"
+                strokeLinecap="round"
               />
               <path
                 id="Vector"
                 d="M7.5 14.16C7.5 14.16 3.33 11.09 3.33 10C3.33 8.9 7.5 5.83 7.5 5.83"
                 stroke="#002B55"
-                stroke-opacity="1.000000"
-                stroke-width="1.265625"
-                stroke-linejoin="round"
-                stroke-linecap="round"
+                strokeOpacity="1.000000"
+                strokeWidth="1.265625"
+                strokeLinejoin="round"
+                strokeLinecap="round"
               />
             </g>
           </svg>
@@ -129,7 +143,7 @@ const ProductSection = () => {
 
         <button
           onClick={nextSlide}
-          className="absolute right-[-25px] top-[50%] z-10 w-[47px] h-[47px] bg-white border-[0.84px] border-[#1A1A1A] opacity-[0.7] rounded-[84px] p-[13px] cursor-pointer"
+          className="absolute right-[-15px] sm:right-[-20px] lg:right-[-25px] top-[53%] z-10 w-[40px] h-[40px] sm:w-[44px] sm:h-[44px] lg:w-[47px] lg:h-[47px] bg-white border-[0.84px] border-[#1A1A1A] opacity-[0.7] rounded-[84px] p-[10px] sm:p-[12px] lg:p-[13px] cursor-pointer"
           aria-label="Next product"
         >
           <svg
@@ -148,7 +162,7 @@ const ProductSection = () => {
                   height="19.156250"
                   transform="translate(0.421875 0.421875)"
                   fill="white"
-                  fill-opacity="0"
+                  fillOpacity="0"
                 />
               </clipPath>
             </defs>
@@ -159,33 +173,33 @@ const ProductSection = () => {
               height="19.156250"
               transform="translate(0.421875 0.421875)"
               fill="#FFFFFF"
-              fill-opacity="0"
+              fillOpacity="0"
             />
-            <g clip-path="url(#clip259_129)">
+            <g clipPath="url(#clip259_129)">
               <path
                 id="Vector"
                 d="M16.66 9.99L3.33 9.99"
                 stroke="#002B55"
-                stroke-opacity="1.000000"
-                stroke-width="1.265625"
-                stroke-linejoin="round"
-                stroke-linecap="round"
+                strokeOpacity="1.000000"
+                strokeWidth="1.265625"
+                strokeLinejoin="round"
+                strokeLinecap="round"
               />
               <path
                 id="Vector"
                 d="M12.5 14.16C12.5 14.16 16.66 11.09 16.66 10C16.66 8.9 12.5 5.83 12.5 5.83"
                 stroke="#002B55"
-                stroke-opacity="1.000000"
-                stroke-width="1.265625"
-                stroke-linejoin="round"
-                stroke-linecap="round"
+                strokeOpacity="1.000000"
+                strokeWidth="1.265625"
+                strokeLinejoin="round"
+                strokeLinecap="round"
               />
             </g>
           </svg>
         </button>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Products Grid - Enhanced responsive grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {visibleProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -195,4 +209,4 @@ const ProductSection = () => {
   );
 }
 
-export default ProductSection;
+export default AgriculturalProduct;

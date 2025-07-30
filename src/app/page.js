@@ -1,14 +1,18 @@
 import React from "react";
 import Header from "./components/Header";
 import { HeroSection } from "./components/HeroSection";
-import ProductSection from "./components/ProductSection";
+import AgriculturalProduct from "./components/AgriculturalProduct";
+import LandscapeProduct from "./components/LandscapeProduct";
+import CtaSection from "./components/CtaSection";
 
 const page = () => {
   return (
     <div>
       <Header />
       {/* <HeroSection /> */}
-      <ProductSection />
+      <AgriculturalProduct />
+      <LandscapeProduct />
+      <CtaSection />
     </div>
   );
 };
